@@ -1,0 +1,114 @@
+git clone https://github.com/ibm-developer-skills-network/zzrjt-practice-project-emb-ai.git practice_project
+
+git clone https://github.com/ibm-developer-skills-network/oaqjp-final-project-emb-ai.git final_project
+
+
+python3.11 -V 
+pip3.11 show requests flask pylint torch
+
+
+
+python3.11 -m pip install requests flask pylint torch
+
+
+from emotion_detection import emotion_detector
+
+emotion_detector("I love this new technology")
+
+emotion_detector("I think I'm having fun")
+
+
+emotion_detector("I am so happy I am doing this")
+
+
+
+from EmotionDetection.emotion_detection import emotion_detector
+emotion_detector("I hate working long hours.")
+
+
+emotion_detector("I hate working long hours.")
+{'anger': 0.64999825, 'disgust': 0.03349073, 'fear': 0.05567236, 'joy': 0.008661813, 'sadness': 0.19678932, 'dominant_emotion': 'anger'}
+
+
+dominant_emotion = emotionPredictions['emotion']['sadness']
+
+foo={'anger': 0.64999825, 'disgust': 0.03349073, 'fear': 0.05567236, 'joy': 0.008661813, 'sadness': 0.19678932, 'dominant_emotion': 'anger'}
+
+dict_var={'anger': 0.64999825, 'disgust': 0.03349073, 'fear': 0.05567236, 'joy': 0.008661813, 'sadness': 0.19678932, 'dominant_emotion': 'anger'}
+
+# Extract the dominant_variable emotion to append at the end.
+dominant_emotion = dict_var['dominant_emotion']
+
+
+#Clone dict_var for dictionary manipulation. NOTE: dict_var is still intact in its original form
+dict_var1 = dict_var.copy()
+del dict_var1['dominant_emotion'] 
+
+
+# Create a list from Dictionary dict_var1 
+list_var1 = [(key,value) for key,value in dict_var1.items()]
+
+len_list_var1 = len(list_var1)
+
+
+for index in range(len_list_var1):
+	if (index <= len_list_var1 - 3):
+		dynamic_string = dynamic_string + str(list_var1[index]).replace("(", "").replace(")", "").replace(",", ":") + ', '
+	elif (index == len_list_var1 - 2):
+		dynamic_string = dynamic_string + str(list_var1[index]).replace("(", "").replace(")", "").replace(",", ":") + ' and '
+	else:	
+		dynamic_string = dynamic_string + str(list_var1[index]).replace("(", "").replace(")", "").replace(",", ":")
+
+
+
+'anger': 0.64999825, 'disgust': 0.03349073, 'fear': 0.05567236, 'joy': 0.008661813 and 'sadness': 0.19678932
+
+
+Desired:
+
+For the given statement, the system response is 'anger': 0.006274985, 'disgust': 0.0025598293, 'fear': 0.009251528, 'joy': 0.9680386 and 'sadness': 0.049744144. The dominant emotion is joy.
+
+
+
+str_var1 = print(str(foo1).replace("{", "").replace("}", ""))
+'anger': 0.64999825, 'disgust': 0.03349073, 'fear': 0.05567236, 'joy': 0.008661813, 'sadness': 0.19678932
+
+
+
+
+
+
+
+--Text Version
+'{"emotionPredictions":[{"emotion":{"anger":0.0132405795, "disgust":0.0020517302, "fear":0.009090992, "joy":0.9699522, "sadness":0.054984167}, "target":"", "emotionMentions":[{"span":{"begin":0, "end":26, "text":"I love this new technology"}, "emotion":{"anger":0.0132405795, "disgust":0.0020517302, "fear":0.009090992, "joy":0.9699522, "sadness":0.054984167}}]}], "producerId":{"name":"Ensemble Aggregated Emotion Workflow", "version":"0.0.1"}}'
+
+
+
+
+--Dict Version:
+{'emotionPredictions': [{'emotion': {'anger': 0.0132405795, 'disgust': 0.0020517302, 'fear': 0.009090992, 'joy': 0.9699522, 'sadness': 0.054984167}, 'target': '', 'emotionMentions': [{'span': {'begin': 0, 'end': 26, 'text': 'I love this new technology'}, 'emotion': {'anger': 0.0132405795, 'disgust': 0.0020517302, 'fear': 0.009090992, 'joy': 0.9699522, 'sadness': 0.054984167}}]}], 'producerId': {'name': 'Ensemble Aggregated Emotion Workflow', 'version': '0.0.1'}}
+
+
+
+(
+
+{'anger': 0.0132405795, 'disgust': 0.0020517302, 'fear': 0.009090992, 'joy': 0.9699522, 'sadness': 0.054984167}, 
+
+{'anger': 0.0132405795, 'disgust': 0.0020517302, 'fear': 0.009090992, 'joy': 0.9699522, 'sadness': 0.054984167}
+
+)
+
+
+    anger = 'anger'
+    disgust = 'disgust'
+    fear = 'fear'
+    joy = 'joy'
+    sadness = 'sadness'
+	dominant_emotion = 'dominant_emotion'
+
+
+{'code': 3, 'message': 'Exception raised during inference. This may be a problem with your input: value check failed: Input RawDocument object `raw_document` cannot be empty', 'details': []}
+
+
+emotionPredictions = formatted_response['message']
+'Exception raised during inference. This may be a problem with your input: value check failed: Input RawDocument object `raw_document` cannot be empty'
